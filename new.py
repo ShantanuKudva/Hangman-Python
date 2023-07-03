@@ -8,6 +8,7 @@ from py_random_words import RandomWords
 dictionary = PyDictionary()
 random_input =str(RandomWords().get_word())
 
+
 print(f"Hint - {dictionary.meaning(random_input)}")
 random_word_length = len(random_input)
 display = []
@@ -25,6 +26,7 @@ while not end_of_game and number_of_loops:
     for position in range(random_word_length):
         if random_input[position] == user_word:
             display[position] = user_word
+            number_of_loops+=1
 
     print(display)
     number_of_loops -= 1
